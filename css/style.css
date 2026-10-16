@@ -768,3 +768,61 @@ input[type="number"] {
         left: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    /* Atur ulang container utama atau form agar tidak terpotong */
+    .form-itinerary {
+        max-width: 100% !important;
+        padding: 20px 15px !important;
+        margin: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Penyesuaian ukuran font form agar tidak terlalu besar di HP */
+    .form-group label {
+        font-size: 14px;
+    }
+
+    /* Mencegah auto-zoom yang mengganggu di browser HP (iOS) */
+    .form-itinerary select,
+    .form-itinerary input[type="number"] {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+
+    /* Jika ada galeri/grid katalog wisata, ubah jadi 1 kolom ke bawah */
+    .grid-destinasi,
+    .catalog-container,
+    .card-container {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    /* Penyesuaian ukuran judul utama agar pas di layar kecil */
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+}
+
+/* Untuk layar HP yang ukurannya lebih kecil lagi (maksimal 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
+    .form-itinerary {
+        padding: 15px 10px !important;
+        border-radius: 8px;
+    }
+
+    /* Tombol utama dibuat selebar layar biar gampang dipencet */
+    .form-itinerary button[type="submit"] {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
