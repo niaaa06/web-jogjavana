@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksplor Jogja - Destinasi Lengkap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI UTAMA -->
+    <header>
+        <div class="logo">Jogja<span>Vana</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sejarah.html">Histori</a>
+            <a href="eksplor.html" class="active">Eksplor</a>
+            <a href="itinerary.html">Itinerary</a>
+        </nav>
+    </header>
+<main class="container">
+    <div class="section-title">
+        <h1>Eksplorasi Keistimewaan Jogja</h1>
+        <input type="text" id="cariTempat" class="search-bar" onkeyup="cariDestinasi()" placeholder="Cari wisata, kuliner, hotel...">
+    </div>
+
+    <!-- Filter Kategori -->
+<div class="sub-nav">
+    <button class="sub-btn" onclick="filterKartu('semua')">Semua</button>
+    <button class="sub-btn" onclick="filterKartu('rekomendasi')">Paling Rekomendasi</button>
+    <button class="sub-btn" onclick="filterKartu('budaya')">Budaya & Adat</button>
+    <button class="sub-btn" onclick="filterKartu('wisata')">Wisata Alam</button>
+    <button class="sub-btn" onclick="filterKartu('sejarah')">Sejarah</button>
+    <button class="sub-btn" onclick="filterKartu('kuliner')">Kuliner</button>
+    <button class="sub-btn" onclick="filterKartu('hotel')">Hotel</button>
+</div>
+
+    <!-- WADAH KARTU -->
+    <div id="wadahKartu" class="kumpulan-kartu"></div>
+
+    <!-- untuk semua modal-->
+    <div id="modalDinamis" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="tutupModalDinamis()">&times;</span>
+            <h2 id="modalJudul"></h2>
+            <img id="modalGambar" src="" alt="" class="img-detail">
+
+            <p id="modalDeskripsi"></p>
+
+            <div class="info-detail">
+                <p><strong>HTM / Harga:</strong> <span id="modalHtm"></span></p>
+                <p><strong>Jam Buka:</strong> <span id="modalJam"></span></p>
+                <p><strong>Alamat:</strong> <span id="modalAlamat"></span></p>
+            </div>
+
+            <h3>Google Maps:</h3>
+            <div class="map-container">
+                <iframe id="modalMaps" src="" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 JogjaVana</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

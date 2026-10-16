@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rencanakan Liburan - Eksplor Jogja</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI UTAMA -->
+    <header>
+        <div class="logo">Jogja<span>Vana</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sejarah.html">Histori</a>
+            <a href="eksplor.html">Eksplor</a>
+            <a href="itinerary.html" class="active">Itinerary</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="section-title">
+            <h1>Custom Itinerary Perencana Liburan</h1>
+            <p>Bingung mau ke mana saja selama di Jogja? Isikan preferensi liburanmu di bawah ini dan biarkan sistem merancang rincian perjalanan secara otomatis!</p>
+        </div>
+
+       <!-- FORM CUSTOM ITINERARY -->
+<form id="formItinerary" class="form-itinerary" onsubmit="buatItinerary(event)">
+    <div class="form-group">
+        <label for="durasi">1. Berapa lama kamu berencana liburan di Jogja?</label>
+        <select id="durasi" required>
+            <option value="1">1 Hari (Quick Trip)</option>
+            <option value="2">2 Hari 1 Malam</option>
+            <option value="3">3 Hari 2 Malam</option>
+            <option value="4">4 Hari 3 Malam</option>
+        </select>
+    </div>
+
+    <!-- TAMBAHAN: JUMLAH ORANG -->
+    <div class="form-group">
+        <label for="jumlahOrang">2. Berapa jumlah orang yang akan ikut?</label>
+        <input type="number" id="jumlahOrang" min="1" value="1" placeholder="Masukkan jumlah peserta" required>
+    </div>
+
+    <!-- PILIHAN KATEGORI FOKUS UTAMA -->
+    <div class="form-group">
+        <label for="fokus">3. Apa fokus utama liburanmu?</label>
+        <select id="fokus" required>
+            <option value="santai">Wisata Alam & Santai</option>
+            <option value="budaya">Sejarah & Budaya Kraton</option>
+            <option value="kuliner">Jelajah Kuliner Legendaris</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="budget">4. Berapa kisaran budget per orang per hari?</label>
+        <select id="budget" required>
+            <option value="backpacker">Backpacker / Hemat</option>
+            <option value="standar">Standar / Nyaman</option>
+            <option value="mewah">Sultan / Mewah</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer; padding: 14px; font-size: 16px;">Rancang Rencana Liburanku</button>
+</form>
+        <!-- WADAH HASIL ITINERARY -->
+        <div id="hasilItinerary" class="hasil-itinerary" style="display: none;">
+            <h3>Rekomendasi Rencana Perjalananmu:</h3>
+            <div id="detailRencana"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Proyek Akhir Web - Pesona Yogyakarta</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
