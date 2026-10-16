@@ -843,4 +843,45 @@ footer {
         left: 10px;
         right: auto;
     }
+
+    /* ==========================================
+       TAMBAHAN: AUDIO & GALERI FOTO UNTUK HP
+       ========================================== */
+    .audio-widget {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .audio-info h3,
+    .audio-info p {
+        text-align: center;
+    }
+
+    .audio-player {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .audio-player audio {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .slider-wrapper {
+        gap: 8px;
+        padding: 0 5px;
+    }
+
+    #sliderImage {
+        height: 200px;
+    }
+
+    .slider-wrapper .btn-primary {
+        padding: 8px 12px;
+        font-size: 14px;
+        height: auto !important;
+    }
 }
