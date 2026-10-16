@@ -1,4 +1,9 @@
-// jam otomatis
+// Fungsi untuk membuka dan menutup menu navigasi di HP
+function toggleMenu() {
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.toggle("active-nav");
+}
+
 window.onload = function() {
     let jam = new Date().getHours();
     let elemenSalam = document.getElementById("salamOtomatic");
