@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+    <div class="logo">Jogja<span>Vana</span></div>
 
-    <!-- NAVIGASI UTAMA -->
-    <header>
-        <div class="logo">Jogja<span>Vana</span></div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="sejarah.html">Histori</a>
-            <a href="eksplor.html">Eksplor</a>
-            <a href="itinerary.html" class="active">Itinerary</a>
-        </nav>
-    </header>
+    <!-- Tombol Hamburger (Wajib ada di setiap file HTML) -->
+    <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="sejarah.html">Histori</a>
+        <a href="eksplor.html">Eksplor</a>
+        <a href="itinerary.html">Itinerary</a>
+    </nav>
+</header>
 
     <main class="container">
         <div class="section-title">

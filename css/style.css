@@ -1,5 +1,5 @@
 /* ==========================================
-   RESET & GLOBAL STYLES
+   GAYA UTAMA & ASLI (TIDAK DIUBAH)
    ========================================== */
 * {
     margin: 0;
@@ -9,14 +9,10 @@
 }
 
 body {
-    background-color: #FDFBF7;
+    background-color: #Fdfbf7;
     color: #333;
-    overflow-x: hidden;
 }
 
-/* ==========================================
-   HEADER & NAVBAR (DENGAN HAMBURGER MOBILE)
-   ========================================== */
 header {
     background-color: #4A3525;
     padding: 15px 5%;
@@ -52,12 +48,11 @@ header nav a {
     transition: color 0.3s;
 }
 
-header nav a:hover,
-header nav a.active {
+header nav a:hover, header nav a.active {
     color: #E6B800;
 }
 
-/* Tombol Hamburger (Hidden di Desktop) */
+/* Tombol Hamburger (Untuk Semua Halaman di HP) */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -73,13 +68,10 @@ header nav a.active {
     transition: 0.3s ease;
 }
 
-/* ==========================================
-   HERO SECTION & STATS
-   ========================================== */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url('../assets/images/jogja.jpg') center/cover no-repeat;
-    height: 60vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,80 +81,20 @@ header nav a.active {
 }
 
 .hero-content h1 {
-    font-size: 38px;
+    font-size: 42px;
     margin-bottom: 15px;
     color: #FFF;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 .hero-content p {
-    font-size: 16px;
+    font-size: 18px;
     max-width: 650px;
     margin: 0 auto 25px auto;
     line-height: 1.5;
     text-align: center;
 }
 
-.stats-bar {
-    background-color: #F4EBE1;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 5%;
-    border-bottom: 2px solid #E0D0C0;
-    text-align: center;
-}
-
-.stat-item h3 {
-    font-size: 24px;
-    color: #4A3525;
-    margin-bottom: 5px;
-}
-
-.stat-item p {
-    font-size: 13px;
-    color: #666;
-    margin: 0;
-    text-align: center;
-}
-
-/* ==========================================
-   CONTAINER & UTILITY
-   ========================================== */
-main, .container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 25px 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    min-height: 60vh;
-}
-
-h1, h2 {
-    color: #4A3525;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.section-title p {
-    color: #666;
-    text-align: center;
-}
-
-/* ==========================================
-   BUTTONS
-   ========================================== */
 .btn-primary {
     background-color: #E6B800;
     color: #333;
@@ -178,7 +110,7 @@ p {
 
 .btn-primary:hover {
     background-color: #FFD700;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .btn-secondary {
@@ -196,28 +128,81 @@ p {
     background-color: #332419;
 }
 
-/* ==========================================
-   FITUR GRID (BERANDA)
-   ========================================== */
+.stats-bar {
+    background-color: #F4EBE1;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 10%;
+    border-bottom: 2px solid #E0D0C0;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 28px;
+    color: #4A3525;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    text-align: center;
+}
+
+main, .container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    min-height: 60vh;
+}
+
+h1, h2 {
+    color: #4A3525;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title p {
+    color: #666;
+    text-align: center;
+}
+
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 20px;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .feature-card {
     background-color: #FFF;
     border: 1px solid #EAEAEA;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     text-align: center;
+    flex: 1;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .feature-card h3 {
@@ -225,21 +210,233 @@ p {
     color: #4A3525;
 }
 
-.feature-card p {
+.audio-widget {
+    background: #FFF8EE;
+    border-left: 5px solid #E6B800;
+    padding: 20px 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.audio-info h3 {
+    margin-bottom: 5px;
+    color: #4A3525;
+    text-align: left;
+}
+
+.audio-info p {
+    color: #666;
+    margin: 0;
+    text-align: left;
+}
+
+.cta-banner {
+    background-color: #EFE6DC;
+    border-radius: 12px;
+    padding: 35px;
     text-align: center;
-    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.cta-banner h2 {
+    color: #4A3525;
+    margin-bottom: 10px;
+}
+
+.cta-banner p {
+    text-align: center;
     color: #555;
+    margin-bottom: 20px;
 }
 
 /* ==========================================
-   KATALOG KARTU DESTINASI (HALAMAN EKSPLOR) - FIXED RESPONSIF
+   KARTU EKSPLOR (GAYA LAMA)
    ========================================== */
+.kumpulan-kartu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.kartu {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.kartu img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   FORM & ITINERARY (GAYA LAMA)
+   ========================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+button {
+    background-color: #4A3525;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #332419;
+}
+
+/* SLIDER FOTO BERANDA (DISAMPING, TIDAK ATAS-BAWAH) */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#sliderImage {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   MODAL DETAIL (GAYA LAMA)
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 650px;
+    width: 100%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4A3525;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.img-detail {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.info-detail {
+    background-color: #fdfbf7;
+    border-left: 4px solid #4A3525;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+.info-detail p {
+    margin-bottom: 8px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: 2px solid #D1C2B4;
+    border-radius: 30px;
+    outline: none;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.search-bar:focus {
+    border-color: #4A3525;
+    box-shadow: 0 4px 12px rgba(74, 53, 37, 0.15);
+}
+
+.map-container {
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+/* FOOTER (DI TENGAH) */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Tombol Melompat ke Kategori */
 .sub-nav {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     background-color: #F8F3ED;
     padding: 15px;
     border-radius: 8px;
@@ -257,71 +454,33 @@ p {
     transition: all 0.3s ease;
 }
 
-.sub-btn:hover, .sub-btn.active {
+.sub-btn:hover {
     background-color: #4A3525;
     color: #FFF;
     border-color: #4A3525;
 }
 
-.kumpulan-kartu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #E6B800;
+    color: #333;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
-.kartu {
-    border: 1px solid #E0D0C0;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s;
-    position: relative;
-}
-
-.kartu:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-}
-
-.kartu img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 12px;
-}
-
-.kartu h3 {
-    font-size: 16px;
-    color: #4A3525;
-    margin-bottom: 8px;
-}
-
-.kartu p {
-    font-size: 13px;
-    color: #666;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* ==========================================
-   FORM & ITINERARY
-   ========================================== */
 .form-itinerary {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 650px;
+    gap: 22px;
+    max-width: 680px;
     margin: 0 auto;
     background-color: #F8F3ED;
-    padding: 30px;
-    border-radius: 12px;
+    padding: 35px 40px;
+    border-radius: 14px;
     border: 1px solid #E0D0C0;
     box-shadow: 0 6px 20px rgba(74, 53, 37, 0.06);
 }
@@ -336,12 +495,11 @@ p {
 .form-group label {
     font-weight: 600;
     color: #4A3525;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .form-itinerary select,
-.form-itinerary input[type="number"],
-.search-bar {
+.form-itinerary input[type="number"] {
     width: 100%;
     padding: 12px 16px;
     background-color: #FFFFFF;
@@ -354,38 +512,56 @@ p {
 }
 
 .form-itinerary select:focus,
-.form-itinerary input[type="number"]:focus,
-.search-bar:focus {
+.form-itinerary input[type="number"]:focus {
     border-color: #4A3525;
     box-shadow: 0 0 0 3px rgba(74, 53, 37, 0.12);
 }
 
-.search-bar {
-    max-width: 500px;
-    margin: 0 auto 25px auto;
-    display: block;
-    border-radius: 30px;
+.form-itinerary button[type="submit"] {
+    background-color: #E6B800;
+    color: #333;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(230, 184, 0, 0.3);
+}
+
+.form-itinerary button[type="submit"]:hover {
+    background-color: #FFD700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(230, 184, 0, 0.4);
 }
 
 .hasil-itinerary {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 40px;
+    padding-top: 25px;
     border-top: 2px dashed #E0D0C0;
+}
+
+.hasil-itinerary h3 {
+    text-align: center;
+    color: #4A3525;
+    margin-bottom: 25px;
 }
 
 .hari-box {
     background-color: #FFFFFF;
     border-left: 5px solid #E6B800;
-    padding: 18px;
+    padding: 20px;
     border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 .hari-box h4 {
     color: #4A3525;
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: 12px;
+    font-size: 18px;
     text-align: left;
 }
 
@@ -398,14 +574,13 @@ p {
     padding: 8px 0;
     border-bottom: 1px solid #F0F0F0;
     color: #444;
-    font-size: 14px;
     text-align: left;
 }
 
 .budget-box {
     background-color: #4A3525;
     color: #FFF;
-    padding: 18px;
+    padding: 18px 20px;
     border-radius: 8px;
     text-align: center;
     margin-top: 20px;
@@ -418,142 +593,70 @@ p {
 }
 
 /* ==========================================
-   WIDGETS & BANNER
-   ========================================== */
-.audio-widget {
-    background: #FFF8EE;
-    border-left: 5px solid #E6B800;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    gap: 15px;
-}
-
-.audio-info h3 {
-    margin-bottom: 5px;
-    color: #4A3525;
-    text-align: left;
-    font-size: 16px;
-}
-
-.audio-info p {
-    color: #666;
-    margin: 0;
-    text-align: left;
-    font-size: 13px;
-}
-
-.cta-banner {
-    background-color: #EFE6DC;
-    border-radius: 10px;
-    padding: 30px 20px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.cta-banner h2 {
-    color: #4A3525;
-    margin-bottom: 10px;
-    font-size: 22px;
-}
-
-.cta-banner p {
-    text-align: center;
-    color: #555;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-/* ==========================================
-   SLIDER FOTO BERANDA
-   ========================================== */
-.slider-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 0 10px;
-    margin-top: 15px;
-}
-
-.slider-container-img {
-    width: 100%;
-    max-width: 480px;
-}
-
-#sliderImage {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}
-
-/* ==========================================
-   MODAL POPUP DETAIL
-   ========================================== */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 100%;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-.close-btn {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    font-size: 26px;
-    font-weight: bold;
-    color: #4A3525;
-    cursor: pointer;
-}
-
-.img-detail {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin: 12px 0;
-}
-
-/* ==========================================
-   SEJARAH & TIMELINE
+   SEJARAH & TIMELINE (GAYA LAMA YANG AMAN)
    ========================================== */
 .hero-sejarah {
-    background: linear-gradient(rgba(74, 53, 37, 0.8), rgba(74, 53, 37, 0.85)), url('../assets/images/candi prambanan.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(74, 53, 37, 0.75), rgba(74, 53, 37, 0.85)), url('../assets/images/candi prambanan.jpg') center/cover no-repeat;
     color: #FFF;
-    padding: 50px 20px;
+    padding: 70px 20px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.hero-sejarah h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #E6B800;
+}
+
+.hero-sejarah p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.info-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.info-card {
+    background-color: #FFF8EE;
+    border: 1px solid #E0D0C0;
+    border-radius: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    color: #4A3525;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
 }
 
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 30px auto 0 auto;
+    margin: 40px auto 0 auto;
 }
 
 .timeline::after {
@@ -574,8 +677,15 @@ p {
     box-sizing: border-box;
 }
 
-.timeline-item.left { left: 0; text-align: right; }
-.timeline-item.right { left: 50%; text-align: left; }
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
 
 .timeline-dot {
     position: absolute;
@@ -589,22 +699,56 @@ p {
     z-index: 1;
 }
 
-.timeline-item.right .timeline-dot { left: -8px; right: auto; }
+.timeline-item.right .timeline-dot {
+    left: -8px;
+}
 
 .timeline-content {
-    padding: 15px;
+    padding: 20px;
     background-color: #FFFFFF;
     border-radius: 8px;
     border: 1px solid #E0D0C0;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.timeline-date {
+    display: inline-block;
+    font-weight: bold;
+    color: #E6B800;
+    background-color: #4A3525;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    color: #4A3525;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.timeline-content p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.video-section {
+    background-color: #F8F3ED;
+    padding: 40px 20px;
+    border-radius: 12px;
+    border: 1px solid #E0D0C0;
+    margin-bottom: 50px;
 }
 
 .video-wrapper {
-    max-width: 100%;
-    margin: 20px auto 0 auto;
+    max-width: 750px;
+    margin: 25px auto 0 auto;
     background-color: #000;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .video-wrapper video {
@@ -613,23 +757,31 @@ p {
     display: block;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+.video-caption {
+    background-color: #FFFFFF;
+    padding: 15px 20px;
+    text-align: left;
+    border-top: 2px solid #E6B800;
 }
 
+.video-caption p {
+    color: #4A3525;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
 /* ==========================================
-   MEDIA QUERY RESPONSIF UNTUK HP / TABLET (MAX 768px)
+   MEDIA QUERY RESPONSIF HP (UNTUK SEMUA HALAMAN)
    ========================================== */
 @media (max-width: 768px) {
-    /* Navbar Hamburger Aktif */
+    /* Munculkan Hamburger Menu di HP untuk SEMUA halaman */
     .menu-toggle {
         display: flex;
     }
 
+    /* Ubah Navigasi jadi Menu Dropdown Buka-Tutup */
     header nav {
         display: none;
         flex-direction: column;
@@ -640,6 +792,7 @@ footer {
         background-color: #4A3525;
         padding: 15px 0;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
         text-align: center;
     }
 
@@ -648,18 +801,19 @@ footer {
     }
 
     header nav a {
-        padding: 10px 0;
-        font-size: 15px;
+        padding: 12px 0;
+        font-size: 16px;
         display: block;
     }
 
-    /* Penyesuaian Hero & Layout Utama */
-    .hero {
-        height: 50vh;
+    /* Kartu Eksplor menyesuaikan lebar HP */
+    .kartu {
+        width: 100% !important;
     }
 
-    .hero-content h1 {
-        font-size: 26px;
+    /* Grid Beranda & Fitur jadi 1 kolom */
+    .features-grid {
+        flex-direction: column;
     }
 
     .stats-bar {
@@ -667,56 +821,14 @@ footer {
         gap: 15px;
     }
 
-    /* Grid Beranda & Kartu Eksplor jadi 1 Kolom Penuh di HP */
-    .features-grid,
-    .kumpulan-kartu {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    main, .container {
-        margin: 15px 10px;
-        padding: 15px 12px;
-    }
-
-    /* Audio Widget & Slider Vertikal */
-    .audio-widget {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .audio-info h3,
-    .audio-info p {
-        text-align: center;
-    }
-
-    .slider-wrapper {
-        flex-direction: column;
-    }
-
-    .slider-wrapper button {
-        width: 100%;
-        height: 40px;
-    }
-
-    /* Form Itinerary & Input Full Width */
-    .form-itinerary {
-        padding: 20px 15px;
-    }
-
-    .form-itinerary select,
-    .form-itinerary input[type="number"] {
-        font-size: 16px; /* Mencegah auto-zoom di iOS */
-    }
-
-    /* Timeline Sejarah di HP */
+    /* Timeline Sejarah versi HP */
     .timeline::after {
-        left: 15px;
+        left: 20px;
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 40px;
+        padding-left: 50px;
         padding-right: 10px;
     }
 
@@ -728,7 +840,7 @@ footer {
 
     .timeline-dot,
     .timeline-item.right .timeline-dot {
-        left: 7px;
+        left: 10px;
         right: auto;
     }
 }
